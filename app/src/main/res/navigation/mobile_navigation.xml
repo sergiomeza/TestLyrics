@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_search">
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.sergiomeza.lyrics.ui.search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_navigation_search_to_detailLyricsActivity"
+            app:destination="@id/detailLyricsActivity">
+            <argument
+                android:name="artist"
+                app:argType="com.sergiomeza.lyrics.data.object.Artist" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.sergiomeza.lyrics.ui.history.HistoryFragment"
+        android:label="@string/title_history"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_navigation_history_to_detailLyricsActivity"
+            app:destination="@id/detailLyricsActivity">
+            <argument
+                android:name="artist"
+                app:argType="com.sergiomeza.lyrics.data.object.Artist" />
+        </action>
+    </fragment>
+
+    <activity
+        android:id="@+id/detailLyricsActivity"
+        android:name="com.sergiomeza.lyrics.ui.detail.DetailLyricsActivity"
+        android:label="DetailLyricsActivity"
+        tools:layout="@layout/activity_detail_lyrics" />
+
+</navigation>

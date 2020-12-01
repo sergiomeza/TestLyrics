@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LyricsApp</string>
+    <string name="title_search">Search</string>
+    <string name="title_history">History</string>
+    <string name="artist">Artist</string>
+    <string name="sont_title">Song title</string>
+    <string name="no_history">No Search history...</string>
+    <string name="search_not_found">Lyrics for %1$s - %2$s not found</string>
+    <string name="no_connection">No Internet Connection</string>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="artist"
+            type="com.sergiomeza.lyrics.data.object.Artist" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_wallet_send_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        android:background="#90E6E6E6"
+        android:foreground="?android:attr/selectableItemBackground" >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cabin_regular"
+                android:maxWidth="180dp"
+                android:text="@{artist.name}"
+                android:textColor="@color/color_gray_1"
+                android:textSize="16sp"
+                tools:text="Artist Name" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cabin_regular"
+                android:text="@{artist.song}"
+                android:textColor="@color/color_gray_2"
+                android:textSize="14sp"
+                tools:text="Song title" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+</layout>
